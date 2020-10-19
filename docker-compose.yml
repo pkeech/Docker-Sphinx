@@ -1,0 +1,13 @@
+## DEFINE COMPOSE VERSION
+version: '2.4'
+
+## DEFINE SERVICES
+services:
+  sphinx:
+    build:
+      context: .
+    image: pkeech/docker-sphinx:dev
+    volumes:
+      - ./docs:/docs
+    ports:
+      - 8000:8000
